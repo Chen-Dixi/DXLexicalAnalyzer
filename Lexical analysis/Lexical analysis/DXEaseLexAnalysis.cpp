@@ -54,11 +54,11 @@ int DXEaseLexAnalysis::characters(char c)
 int DXEaseLexAnalysis::keyword(string str)
 {
     int i;
-    for (i = 0; i < 50; i++)
+    for (i = 0; i < 31; i++)
     {
         if (str==keywords[i])
         {
-            return 1;
+            return i+1;
         }
     }
     return 0;
@@ -170,8 +170,8 @@ int DXEaseLexAnalysis::floats(char str[])
     return 0;
 }
 
-void DXEaseLexAnalysis::printToken(string value,string type ){
-    cout<<"< "<<value<<" , "<<type<<" >"<<endl;
+void DXEaseLexAnalysis::printToken(string value,int type ){
+    outstream<<"< "<<value<<" , "<<type<<" >"<<endl;
 }
 
 

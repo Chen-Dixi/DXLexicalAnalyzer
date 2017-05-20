@@ -60,18 +60,22 @@ public:
                     }
                 }while(characters(c)||numbers(c));
                 
-                if(keyword(s)==1){//保留字
-                    printToken(s, "keyword");
+                if(int i=keyword(s)){//保留字
+                    printToken(s, i);
                 }else{
-                    printToken(s, "signword");
+                    printToken(s, 32);
                 }
                 rollbackOneCharacer(infile);
             }else if(c=='/'){
                 handleCom();
             }else if(numbers(c)==1){
                 handleNum(c);
-            }else if(c=='>'||c=='='||c=='<'){
+            }else if(c=='>'||c=='='||c=='<'||c=='+'||c=='-'){
                 handleRecogDel(c);
+            }else if(c=='('){
+                printToken("(", 34);
+            }else if (c==')'){
+                printToken(")", 35);
             }
             
             
@@ -91,11 +95,11 @@ private:
     int numbers(char c);// «∑Ò « ˝◊÷
     int integers(char str[]);// «∑Ò «’˚ ˝
     int floats(char str[]);// «∑Ò «∏°µ„–Õ
-    void printToken(string,string);
+    void printToken(string,int);
     void handleCom(){
         char c=fgetc(infile);
         if (c!='*'){
-            printToken("//", "注释");
+            printToken("//", 39);
             fgets(temp, 1024, infile);
         }
         else {
@@ -105,7 +109,7 @@ private:
                 c0=c;
                 c=fgetc(infile);
                 if(c0=='*' && c=='/'){
-                    printToken("/**/", "嵌套注释");
+                    printToken("/**/", 47);
                     break;
                 }
             }
@@ -118,10 +122,16 @@ private:
         int state=1;//q0,q1,q2,q3,q4,q5,q6. 其中q1,q5,q6可以终结。 此时状态为1
         while(!feof(infile)){
             c=fgetc(infile);
-            if((numbers(c)==0 && c!='E' && c!='e' && c!='+' && c!= '-') || ((c=='+'|| c=='-') && state!=2)){
+            
+//            if((numbers(c)==0 && c!='E' && c!='e' && c!='+' && c!= '-') || ((c=='+'|| c=='-') && state!=2)){
+//                rollbackOneCharacer(infile);
+//                break;
+//            }
+            if((!characters(c) && numbers(c)==0 && c!='+' && c!= '-') || ((c=='+'|| c=='-') && state!=2)){
                 rollbackOneCharacer(infile);
                 break;
             }
+            
             switch (state) {
                 case 0:{
                     if(numbers(c)==1)
@@ -133,8 +143,11 @@ private:
                         state=1;
                     else if(c=='E' || c=='e'){
                         state=2;
-                    }else if (c=='.' || c=='.')
+                    }else if (c=='.')
                         state=3;
+                    else if(characters(c)==1){
+                        state=7;
+                    }
                     break;
                 }
                 case 2:
@@ -143,12 +156,17 @@ private:
                         state=5;
                     else if (c=='+'|| c=='-')
                         state=4;
+                    else if(c=='E' || c=='e')
+                        state=7;
                     break;
                 }
                 case 3:
                 {
                     if(numbers(c)==1)
                         state=6;
+                    else if (c=='.'){
+                        state=7;
+                    }
                     break;
                 }
                 case 4:
@@ -176,28 +194,30 @@ private:
         }
         
         if (state==1 || state==5 || state==6){
-            printToken(s, "const number");
+            printToken(s, 33);
+        }else {
+            cout<<"illegal word: "<<s<<endl;
         }
         
     }
     void handleRecogDel(char c){
         switch (c) {
             case '+':{
-                printToken("+", "plus");
+                printToken("+", 37);
                 break;
             }
             case '>':{
                 c=fgetc(infile);
                 switch (c) {
                     case '=':{
-                        printToken(">=", "GE");
+                        printToken(">=", 44);
                         break;}
                     case '>':{
-                        printToken(">>", "?");
+                        printToken(">>", 48);
                         break;
                     }
                     default:{
-                        printToken(">", "GT");
+                        printToken(">", 43);
                         rollbackOneCharacer(infile);
                         break;
                     }
@@ -209,19 +229,19 @@ private:
                 c=fgetc(infile);
                 switch (c) {
                     case '=':{
-                        printToken("<=", "LE");
+                        printToken("<=", 42);
                         break;}
                     case '>':{
-                        printToken("<>", "NE");
+                        printToken("<>", 45);
                         break;
                     }
                     case '<':{
-                        printToken("<<", "?");
+                        printToken("<<", 47);
                         break;
                     }
                         
                     default:{
-                        printToken("<", "LT");
+                        printToken("<", 41);
                         rollbackOneCharacer(infile);
                         break;
                     }
@@ -232,12 +252,12 @@ private:
                 c=fgetc(infile);
                 switch (c) {
                     case '=':{
-                        printToken("==", "E");
+                        printToken("==", 46);
                         break;
                     }
                     default:
                     {
-                        printToken("=", "assign");
+                        printToken("=", 40);
                         rollbackOneCharacer(infile);
                         break;
                     }
@@ -249,7 +269,7 @@ private:
         }
     }
     
-    void rollbackOneCharacer(FILE* fp){
+    void rollbackOneCharacer(FILE* fp){//回滚
         fseek(fp, -1, SEEK_CUR);
     }
     
