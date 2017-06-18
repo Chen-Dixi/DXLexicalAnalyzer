@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C3E9F021ECBF61A00213547 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3E9F001ECBF61A00213547 /* main.cpp */; };
-		4C3E9F071ECBF7E800213547 /* DXEaseLexAnalysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3E9F061ECBF7E800213547 /* DXEaseLexAnalysis.cpp */; };
+		4C8C5F061EF641F8008F6F10 /* TokenScanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C5F051EF641F8008F6F10 /* TokenScanner.cpp */; };
+		4C8C5F091EF6A69A008F6F10 /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C5F071EF6A69A008F6F10 /* Parser.cpp */; };
+		4CBF3CEF1EF402D100CE8D06 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF3CEE1EF402D100CE8D06 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4C3E9EE51ECBE82400213547 /* CopyFiles */ = {
+		4CBF3CE91EF402D100CE8D06 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,20 +25,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4C3E9EE71ECBE82400213547 /* Lexical analysis */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lexical analysis"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C3E9EFA1ECBF5FB00213547 /* Base.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Base.cpp; sourceTree = "<group>"; };
-		4C3E9EFB1ECBF5FB00213547 /* Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
-		4C3E9EFC1ECBF5FB00213547 /* in.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = in.txt; sourceTree = "<group>"; };
-		4C3E9EFD1ECBF5FB00213547 /* LexAn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LexAn.cpp; sourceTree = "<group>"; };
-		4C3E9EFE1ECBF5FB00213547 /* LexAn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LexAn.h; sourceTree = "<group>"; };
-		4C3E9F001ECBF61A00213547 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		4C3E9F031ECBF7A200213547 /* DXEaseLexAnalysis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXEaseLexAnalysis.h; sourceTree = "<group>"; };
-		4C3E9F061ECBF7E800213547 /* DXEaseLexAnalysis.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DXEaseLexAnalysis.cpp; sourceTree = "<group>"; };
-		4C3E9F091ECC12F700213547 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		4C4B66851EF612A900E8B0E1 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		4C8C5F051EF641F8008F6F10 /* TokenScanner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TokenScanner.cpp; sourceTree = "<group>"; };
+		4C8C5F071EF6A69A008F6F10 /* Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parser.cpp; sourceTree = "<group>"; };
+		4CBF3CEB1EF402D100CE8D06 /* Parser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Parser; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CBF3CEE1EF402D100CE8D06 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4C3E9EE41ECBE82400213547 /* Frameworks */ = {
+		4CBF3CE81EF402D100CE8D06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,113 +43,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C3E9EDE1ECBE82400213547 = {
+		4CBF3CE21EF402D100CE8D06 = {
 			isa = PBXGroup;
 			children = (
-				4C3E9EE91ECBE82400213547 /* Lexical analysis */,
-				4C3E9EE81ECBE82400213547 /* Products */,
+				4CBF3CED1EF402D100CE8D06 /* Parser */,
+				4CBF3CEC1EF402D100CE8D06 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4C3E9EE81ECBE82400213547 /* Products */ = {
+		4CBF3CEC1EF402D100CE8D06 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C3E9EE71ECBE82400213547 /* Lexical analysis */,
+				4CBF3CEB1EF402D100CE8D06 /* Parser */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C3E9EE91ECBE82400213547 /* Lexical analysis */ = {
+		4CBF3CED1EF402D100CE8D06 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				4C3E9EF91ECBF5FB00213547 /* Example */,
-				4C3E9F001ECBF61A00213547 /* main.cpp */,
-				4C3E9F091ECC12F700213547 /* Log.h */,
-				4C3E9F061ECBF7E800213547 /* DXEaseLexAnalysis.cpp */,
-				4C3E9F031ECBF7A200213547 /* DXEaseLexAnalysis.h */,
+				4C4B66851EF612A900E8B0E1 /* Log.h */,
+				4CBF3CEE1EF402D100CE8D06 /* main.cpp */,
+				4C8C5F051EF641F8008F6F10 /* TokenScanner.cpp */,
+				4C8C5F071EF6A69A008F6F10 /* Parser.cpp */,
 			);
-			path = "Lexical analysis";
-			sourceTree = "<group>";
-		};
-		4C3E9EF91ECBF5FB00213547 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				4C3E9EFA1ECBF5FB00213547 /* Base.cpp */,
-				4C3E9EFB1ECBF5FB00213547 /* Base.h */,
-				4C3E9EFC1ECBF5FB00213547 /* in.txt */,
-				4C3E9EFD1ECBF5FB00213547 /* LexAn.cpp */,
-				4C3E9EFE1ECBF5FB00213547 /* LexAn.h */,
-			);
-			path = Example;
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C3E9EE61ECBE82400213547 /* Lexical analysis */ = {
+		4CBF3CEA1EF402D100CE8D06 /* Parser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C3E9EEE1ECBE82400213547 /* Build configuration list for PBXNativeTarget "Lexical analysis" */;
+			buildConfigurationList = 4CBF3CF21EF402D100CE8D06 /* Build configuration list for PBXNativeTarget "Parser" */;
 			buildPhases = (
-				4C3E9EE31ECBE82400213547 /* Sources */,
-				4C3E9EE41ECBE82400213547 /* Frameworks */,
-				4C3E9EE51ECBE82400213547 /* CopyFiles */,
+				4CBF3CE71EF402D100CE8D06 /* Sources */,
+				4CBF3CE81EF402D100CE8D06 /* Frameworks */,
+				4CBF3CE91EF402D100CE8D06 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Lexical analysis";
-			productName = "Lexical analysis";
-			productReference = 4C3E9EE71ECBE82400213547 /* Lexical analysis */;
+			name = Parser;
+			productName = Parser;
+			productReference = 4CBF3CEB1EF402D100CE8D06 /* Parser */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4C3E9EDF1ECBE82400213547 /* Project object */ = {
+		4CBF3CE31EF402D100CE8D06 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Dixi-Chen";
 				TargetAttributes = {
-					4C3E9EE61ECBE82400213547 = {
+					4CBF3CEA1EF402D100CE8D06 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9RL6AH3SC8;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 4C3E9EE21ECBE82400213547 /* Build configuration list for PBXProject "Lexical analysis" */;
+			buildConfigurationList = 4CBF3CE61EF402D100CE8D06 /* Build configuration list for PBXProject "Parser" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 4C3E9EDE1ECBE82400213547;
-			productRefGroup = 4C3E9EE81ECBE82400213547 /* Products */;
+			mainGroup = 4CBF3CE21EF402D100CE8D06;
+			productRefGroup = 4CBF3CEC1EF402D100CE8D06 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C3E9EE61ECBE82400213547 /* Lexical analysis */,
+				4CBF3CEA1EF402D100CE8D06 /* Parser */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4C3E9EE31ECBE82400213547 /* Sources */ = {
+		4CBF3CE71EF402D100CE8D06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C3E9F021ECBF61A00213547 /* main.cpp in Sources */,
-				4C3E9F071ECBF7E800213547 /* DXEaseLexAnalysis.cpp in Sources */,
+				4C8C5F091EF6A69A008F6F10 /* Parser.cpp in Sources */,
+				4C8C5F061EF641F8008F6F10 /* TokenScanner.cpp in Sources */,
+				4CBF3CEF1EF402D100CE8D06 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4C3E9EEC1ECBE82400213547 /* Debug */ = {
+		4CBF3CF01EF402D100CE8D06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -200,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		4C3E9EED1ECBE82400213547 /* Release */ = {
+		4CBF3CF11EF402D100CE8D06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -240,7 +224,7 @@
 			};
 			name = Release;
 		};
-		4C3E9EEF1ECBE82400213547 /* Debug */ = {
+		4CBF3CF31EF402D100CE8D06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9RL6AH3SC8;
@@ -248,7 +232,7 @@
 			};
 			name = Debug;
 		};
-		4C3E9EF01ECBE82400213547 /* Release */ = {
+		4CBF3CF41EF402D100CE8D06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9RL6AH3SC8;
@@ -259,25 +243,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C3E9EE21ECBE82400213547 /* Build configuration list for PBXProject "Lexical analysis" */ = {
+		4CBF3CE61EF402D100CE8D06 /* Build configuration list for PBXProject "Parser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C3E9EEC1ECBE82400213547 /* Debug */,
-				4C3E9EED1ECBE82400213547 /* Release */,
+				4CBF3CF01EF402D100CE8D06 /* Debug */,
+				4CBF3CF11EF402D100CE8D06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C3E9EEE1ECBE82400213547 /* Build configuration list for PBXNativeTarget "Lexical analysis" */ = {
+		4CBF3CF21EF402D100CE8D06 /* Build configuration list for PBXNativeTarget "Parser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C3E9EEF1ECBE82400213547 /* Debug */,
-				4C3E9EF01ECBE82400213547 /* Release */,
+				4CBF3CF31EF402D100CE8D06 /* Debug */,
+				4CBF3CF41EF402D100CE8D06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4C3E9EDF1ECBE82400213547 /* Project object */;
+	rootObject = 4CBF3CE31EF402D100CE8D06 /* Project object */;
 }

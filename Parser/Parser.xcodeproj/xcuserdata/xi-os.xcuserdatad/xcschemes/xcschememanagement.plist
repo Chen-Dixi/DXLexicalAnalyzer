@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Lexical analysis.xcscheme</key>
+		<key>Parser.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4C3E9EE61ECBE82400213547</key>
+		<key>4CBF3CEA1EF402D100CE8D06</key>
 		<dict>
 			<key>primary</key>
 			<true/>

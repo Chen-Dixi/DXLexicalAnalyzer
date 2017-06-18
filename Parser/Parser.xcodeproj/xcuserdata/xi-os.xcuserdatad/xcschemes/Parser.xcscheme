@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C3E9EE61ECBE82400213547"
-               BuildableName = "Lexical analysis"
-               BlueprintName = "Lexical analysis"
-               ReferencedContainer = "container:Lexical analysis.xcodeproj">
+               BlueprintIdentifier = "4CBF3CEA1EF402D100CE8D06"
+               BuildableName = "Parser"
+               BlueprintName = "Parser"
+               ReferencedContainer = "container:Parser.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C3E9EE61ECBE82400213547"
-            BuildableName = "Lexical analysis"
-            BlueprintName = "Lexical analysis"
-            ReferencedContainer = "container:Lexical analysis.xcodeproj">
+            BlueprintIdentifier = "4CBF3CEA1EF402D100CE8D06"
+            BuildableName = "Parser"
+            BlueprintName = "Parser"
+            ReferencedContainer = "container:Parser.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C3E9EE61ECBE82400213547"
-            BuildableName = "Lexical analysis"
-            BlueprintName = "Lexical analysis"
-            ReferencedContainer = "container:Lexical analysis.xcodeproj">
+            BlueprintIdentifier = "4CBF3CEA1EF402D100CE8D06"
+            BuildableName = "Parser"
+            BlueprintName = "Parser"
+            ReferencedContainer = "container:Parser.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C3E9EE61ECBE82400213547"
-            BuildableName = "Lexical analysis"
-            BlueprintName = "Lexical analysis"
-            ReferencedContainer = "container:Lexical analysis.xcodeproj">
+            BlueprintIdentifier = "4CBF3CEA1EF402D100CE8D06"
+            BuildableName = "Parser"
+            BlueprintName = "Parser"
+            ReferencedContainer = "container:Parser.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
