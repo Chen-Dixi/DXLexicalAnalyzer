@@ -136,6 +136,7 @@ private:
     vector<Error> errorMsg;
     map<string,int> tokenCode;
     void initTokenCode(){
+        tokenCode["main"]=0;
         tokenCode["int"]=1;
         tokenCode["char"]=2;
         tokenCode["float"]=3;
@@ -147,8 +148,8 @@ private:
         tokenCode["void"]=9;
         tokenCode["while"]=10;
         tokenCode["if"]=11;
-        tokenCode["else"]=12;
-        tokenCode["for"]=13;
+        tokenCode["for"]=12;
+        tokenCode["else"]=13;
         tokenCode["do"]=14;
         tokenCode["switch"]=15;
         tokenCode["case"]=16;

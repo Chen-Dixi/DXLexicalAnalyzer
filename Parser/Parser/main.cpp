@@ -17,6 +17,9 @@ int main(int argc, const char * argv[]) {
     
     scanner.scanTokens();
     Parser parser(scanner.getTokenList());
+    parser.printToken();
+    parser.startParse();
+    
     
     
 }
